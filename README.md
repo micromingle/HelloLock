@@ -3,7 +3,7 @@ a library for app lock
 it will renew as library proceeds
 
 
-USAGE:
+# USAGE:
 
 1 Add the following line in onCreate of your App file AppLockManager.getInstance().enableDefaultAppLockIfAvailable(this);
 
