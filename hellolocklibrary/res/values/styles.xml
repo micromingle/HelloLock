@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="PasscodeInputItemStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="PasscodeKeyboardButtonStyle" parent="@android:style/Widget.Button">
+       <item name="android:textSize">16sp</item>
+  	   <item name="android:textColor">#FF464646</item>
+       <item name="android:gravity">center</item>
+       <item name="android:background">@drawable/passcode_keyboard_button</item>
+       <item name="android:layout_margin">2dp</item>
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:minHeight">38dp</item>
+   </style>
+    <style name="PatternView">
+        <item name="aspect">square</item>
+    </style>
+
+    <style name="PatternView.Holo">#
+        <item name="regularColor">@android:color/white</item>
+        <item name="errorColor">@android:color/holo_red_light</item>
+        <item name="successColor">@android:color/white</item>
+        <item name="pathColor">@android:color/white</item>
+        <item name="dotDrawableDefault">@drawable/pl_patternview_dot_default</item>
+        <item name="dotDrawableTouched">@drawable/pl_patternview_dot_touched</item>
+        <item name="circleDrawableDefault">@drawable/pl_patternview_circle_default_alpha</item>
+        <item name="circleDrawable">@drawable/pl_patternview_circle_alpha</item>
+        <item name="arrowUpDrawable">@drawable/pl_patternview_arrow_alpha</item>
+    </style>
+
+    <style name="PatternView.Holo.Light">
+        <item name="regularColor">@android:color/holo_blue_dark</item>
+        <item name="successColor">@android:color/holo_blue_dark</item>
+        <item name="pathColor">@android:color/holo_blue_dark</item>
+    </style>
+
+</resources>
