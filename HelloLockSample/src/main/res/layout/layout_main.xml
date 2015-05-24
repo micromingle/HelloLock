@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn1"
+            android:text="Activity One"
+            style="@style/button_Style" />
+        <Button
+            android:id="@+id/btn2"
+            android:text="Activity Two"
+            style="@style/button_Style" />
+        <Button
+            android:id="@+id/btn_setting"
+            android:text="@string/setting"
+            style="@style/button_Style" />
+    </LinearLayout>
+</RelativeLayout>

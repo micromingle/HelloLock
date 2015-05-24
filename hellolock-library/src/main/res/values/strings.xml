@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="App_name">Hello Lock</string>
+  <string name="passcode_manage">Manage passcode</string>
+  <string name="passcode_enter_passcode">Enter your passcode</string>
+  <string name="passcode_enter_old_passcode">Enter your old passcode</string>
+  <string name="passcode_re_enter_passcode">Re-enter your passcode</string>
+  <string name="passcode_change_passcode">Change passcode</string>
+  <string name="passcode_set">Passcode set</string>
+  <string name="passcode_wrong_passcode">Wrong passcode, please try again.</string>
+  <string name="passcode_preference_title">Passcode lock</string>
+  <string name="passcode_turn_off">Turn passcode off</string>
+  <string name="passcode_turn_on">Turn passcode on</string>
+  <string name="pl_cancel">Cancel</string>
+  <string name="pl_confirm">Confirm</string>
+  <string name="pl_confirm_pattern">Draw the pattern again to confirm</string>
+  <string name="pl_continue">Continue</string>
+  <string name="pl_draw_pattern">Draw an unlock pattern</string>
+  <string name="pl_draw_pattern_to_unlock">Draw pattern to unlock</string>
+  <string name="pl_forgot_pattern">Forgot pattern</string>
+  <string name="pl_pattern_confirmed">Your new unlock pattern</string>
+  <string name="pl_pattern_recorded">Pattern recorded</string>
+  <string name="pl_pattern_too_short">Connect at least %d dots, please redraw</string>
+  <string name="pl_recording_pattern">Release finger when done</string>
+ <string name="pl_old_pattern">Please draw old pattern</string>
+  <string name="pl_redraw">Redraw</string>
+  <string name="pl_wrong_pattern">Wrong pattern, please retry</string>
+
+  <string name="pl_access_pattern_start">Pattern started</string>
+  <string name="pl_access_pattern_cleared">Pattern cleared</string>
+  <string name="pl_access_pattern_cell_added">Cell added</string>
+  <string name="pl_access_pattern_detected">Pattern completed</string>
+    
+</resources>

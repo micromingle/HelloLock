@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2015 Zhang Hai <Dreaming.in.Code.ZH@Gmail.com>
+  ~ All Rights Reserved.
+  -->
+
+<resources>
+    <string name="app_name">HelloLockSample</string>
+    <string name="setting">锁屏设置</string>
+    <string name="passcode_turn_off">关闭锁屏</string>
+    <string name="passcode_turn_on">开启锁屏</string>
+    <string name="passcode_change_passcode">修改锁屏密码</string>
+</resources>

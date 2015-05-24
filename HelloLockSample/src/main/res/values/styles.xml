@@ -1,0 +1,29 @@
+<resources>
+
+
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="patternViewStyle">@style/PatternView.Holo</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="android:Theme.Holo.Light">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="patternViewStyle">@style/PatternView.Holo.Light</item>
+    </style>
+    <!--   android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:textColor="@android:color/black"
+        android:textSize="20sp"-->
+    <style name="button_Style" parent="android:Widget.Button">
+     <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:background">#27bbbc</item>
+        <item name="android:padding">10dp</item>
+    </style>
+</resources>
