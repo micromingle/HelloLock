@@ -2,7 +2,8 @@ package micromingle.com.hellolock;
 
 import android.app.Application;
 
-import org.wordpress.passcodelock.AppLockManager;
+import com.micromingle.hellolock.AppLockManager;
+
 
 /**
  * Created by Administrator on 5/24/2015.
