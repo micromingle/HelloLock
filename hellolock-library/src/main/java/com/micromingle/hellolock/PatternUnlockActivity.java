@@ -26,8 +26,9 @@ public class PatternUnlockActivity extends BasePatternActivity {
     public void onPatternCreated(List<LockPatternView.Cell> pattern) {
 
         Log.d("pattern ", "pattern created");
+        AbstractAppLock appLock= AppLockManager.getInstance().getCurrentAppLock();
 
-        if(LockPatternUtils.checkPassword(this,pattern)){
+        if(appLock.verifyPassword(this,pattern)){
             setResult(RESULT_OK);
             finish();
         }else{

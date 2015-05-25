@@ -22,11 +22,6 @@ import java.util.List;
 
 public class LockPatternUtils {
 
-    static SharedPreferences sharedPreferences;
-    public static   String password__key="passcode_lock_prefs_password_key";
-   /* hellolock.password_salt=11-maggio-2014-osvaldo-al-49novesimo!
-    hellolock.password_enc_secret=5-maggio-2002-Karel-Poborsky*/
-    private LockPatternUtils() {}
 
     private static String bytesToString(byte[] bytes) {
         return Base64.encodeToString(bytes, Base64.NO_WRAP);
@@ -80,54 +75,7 @@ public class LockPatternUtils {
         return bytesToString(patternToSha1(pattern));
     }
 
-    public static void savePatternToPreference(Context context,List<LockPatternView.Cell> pattern){
-       if(sharedPreferences==null) {
-           sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-       }
-        SharedPreferences.Editor editor=sharedPreferences.edit();
-        String password=bytesToString(patternToSha1(pattern));
-        editor.putString(password__key,password);
-        editor.commit();
-    }
-    public static void saveStringToPreference(Context context,String password){
-        if(sharedPreferences==null) {
-            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        }
-        SharedPreferences.Editor editor=sharedPreferences.edit();
-        editor.putString(password__key,password);
-        editor.commit();
-    }
-    public static boolean checkPassword(Context context, List<LockPatternView.Cell> pattern){
-        if(sharedPreferences==null) {
-            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        }
 
-        String newpassword=bytesToString(patternToSha1(pattern));
-        String oldpassword=sharedPreferences.getString(password__key, "");
-        if(newpassword.equals(oldpassword)){
-            return true;
-        }
-        return false;
-    }
-    public static boolean confirmPassword(Context context, String firstPassword, List<LockPatternView.Cell> confirmPattern){
-        if(sharedPreferences==null) {
-            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        }
 
-        String confromPassword=bytesToString(patternToSha1(confirmPattern));
 
-        if(confromPassword.equals(firstPassword)){
-            return true;
-        }
-        return false;
-    }
-    public void dropPasseord(Context context){
-
-        if(sharedPreferences==null) {
-            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        }
-        SharedPreferences.Editor editor=sharedPreferences.edit();
-        editor.clear();
-        editor.commit();
-    }
 }

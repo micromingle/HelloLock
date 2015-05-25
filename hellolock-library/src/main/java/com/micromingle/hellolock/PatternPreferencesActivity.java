@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 
-public class PasscodePreferencesActivity extends PreferenceActivity {
+public class PatternPreferencesActivity extends PreferenceActivity {
     
     static final int ENABLE_PASSLOCK = 0;
     static final int DISABLE_PASSLOCK = 1;
@@ -59,7 +59,7 @@ public class PasscodePreferencesActivity extends PreferenceActivity {
         @Override
         public boolean onPreferenceClick(Preference preference) {
             int type = AppLockManager.getInstance().getCurrentAppLock().isPasswordLocked() ? DISABLE_PASSLOCK : ENABLE_PASSLOCK;
-            Intent i = new Intent(PasscodePreferencesActivity.this, ManagerPatternActivity.class);
+            Intent i = new Intent(PatternPreferencesActivity.this, ManagerPatternActivity.class);
             i.putExtra("type", type);
             startActivityForResult(i, type);
             return false;
@@ -69,7 +69,7 @@ public class PasscodePreferencesActivity extends PreferenceActivity {
     private OnPreferenceClickListener changePasscodeTouchListener = new OnPreferenceClickListener() {
         @Override
         public boolean onPreferenceClick (Preference preference) {
-            Intent i = new Intent(PasscodePreferencesActivity.this, ManagerPatternActivity.class);
+            Intent i = new Intent(PatternPreferencesActivity.this, ManagerPatternActivity.class);
             i.putExtra("type", CHANGE_PASSWORD);
             i.putExtra("message", getString(R.string.passcode_enter_old_passcode));
             startActivityForResult(i, CHANGE_PASSWORD);
@@ -84,14 +84,14 @@ public class PasscodePreferencesActivity extends PreferenceActivity {
         switch (requestCode) {
             case DISABLE_PASSLOCK:
                 if (resultCode == RESULT_OK) {
-                //    Toast.makeText(PasscodePreferencesActivity.this, getString(R.string.passcode_set), Toast.LENGTH_SHORT).show();
+                //    Toast.makeText(PatternPreferencesActivity.this, getString(R.string.passcode_set), Toast.LENGTH_SHORT).show();
                     changePasscode.setEnabled(false);
                 }
                 break;
             case ENABLE_PASSLOCK:
             case CHANGE_PASSWORD:
                 if (resultCode == RESULT_OK) {
-                    Toast.makeText(PasscodePreferencesActivity.this, getString(R.string.passcode_set), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PatternPreferencesActivity.this, getString(R.string.passcode_set), Toast.LENGTH_SHORT).show();
                     changePasscode.setEnabled(true);
                 } 
                 break;

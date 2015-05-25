@@ -31,9 +31,13 @@ public class ManagerPatternActivity extends BasePatternActivity {
         rightButton.setEnabled(false);
         rightButton.setVisibility(View.GONE);
         messageText.setText(R.string.pl_draw_pattern);
-        type = getIntent().getIntExtra(PasscodePreferencesActivity.TYPE, -1);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            type = extras.getInt("type", -1);
+        }
         Log.d("type", type + "");
-        if(type==PasscodePreferencesActivity.CHANGE_PASSWORD) {
+        if(type== PatternPreferencesActivity.CHANGE_PASSWORD) {
             messageText.setText(R.string.pl_old_pattern);
         }
     }
@@ -50,47 +54,40 @@ public class ManagerPatternActivity extends BasePatternActivity {
 
     @Override
     public void onPatternCreated(List<LockPatternView.Cell> pattern) {
-
+        AbstractAppLock appLock= AppLockManager.getInstance().getCurrentAppLock();
         switch (type) {
 
-            case PasscodePreferencesActivity.DISABLE_PASSLOCK:
-                if (LockPatternUtils.checkPassword(this, pattern)) {
+            case PatternPreferencesActivity.DISABLE_PASSLOCK:
+                if (appLock.verifyPassword(this, pattern)) {
                     setResult(RESULT_OK);
-                    AppLockManager.getInstance().getCurrentAppLock().setPassword(null);
+                    appLock.setPassword(null);
                     finish();
                 } else {
                     messageText.setText(R.string.pl_wrong_pattern);
                     patternView.setDisplayMode(LockPatternView.DisplayMode.Wrong);
-                    // showPasswordError();
-                    // patternView.clearPattern();
                     postClearPatternRunnable();
 
                 }
                 break;
 
-            case PasscodePreferencesActivity.ENABLE_PASSLOCK:
+            case PatternPreferencesActivity.ENABLE_PASSLOCK:
                 if (unverifiedPasscode == null) {
                     //  ((TextView) findViewById(R.id.top_message)).setText(R.string.passcode_re_enter_passcode);
                     messageText.setText(R.string.pl_confirm_pattern);
                     unverifiedPasscode = LockPatternUtils.patternToSha1String(pattern);
                     Log.d("unverifiedPasscode", unverifiedPasscode);
-                    isDrawn = true;//
-                    Log.d("patternDrawn", "Drawn");
-                    //  rightButton.setEnabled(true);
+                    isDrawn = true;
                     leftButton.setText(R.string.pl_redraw);
                     postClearPatternRunnable();
-                    Log.d("button enabled", "rightbutton enabled");
                 } else {
-                    if (LockPatternUtils.confirmPassword(this, unverifiedPasscode, pattern)) {
+                    if (appLock.confirmPassword(this, unverifiedPasscode, pattern)) {
                         setResult(RESULT_OK);
-                        // AppLockManager.getInstance().getCurrentAppLock().setPassword(passLock);
-                        LockPatternUtils.saveStringToPreference(this, unverifiedPasscode);
+                         AppLockManager.getInstance().getCurrentAppLock().setPassword(unverifiedPasscode);
+                       // LockPatternUtils.saveStringToPreference(this, unverifiedPasscode);
                         Log.d("Check", "checking");
                         postClearPatternRunnable();
                         finish();
                     } else {
-                        //unverifiedPasscode = null;
-                        //  topMessage.setText(R.string.passcode_enter_passcode);
                         messageText.setText(R.string.pl_wrong_pattern);
                         patternView.setDisplayMode(LockPatternView.DisplayMode.Wrong);
                         //     showPasswordError();
@@ -100,11 +97,11 @@ public class ManagerPatternActivity extends BasePatternActivity {
                 }
                 break;
 
-            case PasscodePreferencesActivity.CHANGE_PASSWORD:
+            case PatternPreferencesActivity.CHANGE_PASSWORD:
                 //verify old password
                 messageText.setText(R.string.pl_old_pattern);
-                if (LockPatternUtils.checkPassword(this, pattern)) {
-                    type = PasscodePreferencesActivity.ENABLE_PASSLOCK;
+                if (appLock.verifyPassword(this, pattern)) {
+                    type = PatternPreferencesActivity.ENABLE_PASSLOCK;
                     postClearPatternRunnable();
                     messageText.setText(R.string.pl_draw_pattern);
                 } else {

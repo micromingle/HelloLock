@@ -28,7 +28,7 @@
 
         <activity android:name=".ActivityOne"></activity>
         <activity android:name=".ActivityTwo"></activity>
-        <activity android:name="com.micromingle.hellolock.PasscodePreferencesActivity"></activity>
+        <activity android:name="com.micromingle.hellolock.PatternPreferencesActivity"></activity>
         <activity android:name="com.micromingle.hellolock.PatternUnlockActivity"></activity>
         <activity android:name="com.micromingle.hellolock.ManagerPatternActivity"></activity>
     </application>

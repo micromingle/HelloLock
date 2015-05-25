@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.micromingle.hellolock.ManagerPatternActivity;
-import com.micromingle.hellolock.PasscodePreferencesActivity;
+import com.micromingle.hellolock.PatternPreferencesActivity;
 
 /**
  * Created by Administrator on 5/24/2015.
@@ -37,7 +36,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(new Intent(this,ActivityTwo.class));
                 break;
             case R.id.btn_setting:
-                startActivity(new Intent(this,PasscodePreferencesActivity.class));
+                startActivity(new Intent(this,PatternPreferencesActivity.class));
                 break;
             default:
         }

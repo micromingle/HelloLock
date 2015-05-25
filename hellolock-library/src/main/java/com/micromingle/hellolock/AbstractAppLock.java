@@ -1,6 +1,9 @@
 package com.micromingle.hellolock;
 
 import android.app.Application;
+import android.content.Context;
+
+import java.util.List;
 
 public abstract class AbstractAppLock implements Application.ActivityLifecycleCallbacks {
     public static final int DEFAULT_TIMEOUT = 2; //2 seconds
@@ -27,7 +30,8 @@ public abstract class AbstractAppLock implements Application.ActivityLifecycleCa
     public abstract void enable();
     public abstract void disable();
     public abstract void forcePasswordLock();
-    public abstract boolean verifyPassword( String password );
+    public abstract boolean verifyPassword( Context context, List<LockPatternView.Cell> pattern );
     public abstract boolean isPasswordLocked();
     public abstract boolean setPassword(String password);
+    public abstract boolean confirmPassword(Context context, String firstPassword, List<LockPatternView.Cell> confirmPattern);
 }
