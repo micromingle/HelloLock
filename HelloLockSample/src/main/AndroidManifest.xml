@@ -25,16 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.micromingle.hellolock.ManagerPatternActivity"
-            android:label="@string/app_name" >
 
-        </activity>
         <activity android:name=".ActivityOne"></activity>
         <activity android:name=".ActivityTwo"></activity>
         <activity android:name="com.micromingle.hellolock.PasscodePreferencesActivity"></activity>
-        <activity android:name="com.micromingle.hellolock.PatternUnlockActivity"
-            android:launchMode="singleInstance"></activity>
+        <activity android:name="com.micromingle.hellolock.PatternUnlockActivity"></activity>
+        <activity android:name="com.micromingle.hellolock.ManagerPatternActivity"></activity>
     </application>
 
 </manifest>
