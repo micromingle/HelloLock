@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--
-  ~ Copyright (c) 2015 Zhang Hai <Dreaming.in.Code.ZH@Gmail.com>
-  ~ All Rights Reserved.
-  -->
+
 
 <resources>
 
-    <!--
-      ~ From values/attrs.xml at 2cb687e7b9d0cbb1af5ba753453a9a05350a100e, adapted by Zhang Hai.
-      -->
+
     <declare-styleable name="LockPatternView">
         <!-- Defines the aspect to use when drawing PatternView. -->
         <attr name="aspect">

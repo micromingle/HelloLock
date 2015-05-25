@@ -26,4 +26,5 @@
         <item name="android:background">#27bbbc</item>
         <item name="android:padding">10dp</item>
     </style>
+
 </resources>
