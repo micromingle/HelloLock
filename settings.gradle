@@ -1,1 +1,1 @@
-include ':app',  ':hellolock-library', ':HelloLockSample'
+include  ':hellolock-library', ':HelloLockSample'
