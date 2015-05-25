@@ -36,3 +36,8 @@ an android library for you to lock your app
 ...
 
  4  call PatternPreferencesActivity configure your pattern lock
+
+ ```xml
+ <item name="patternViewStyle">@style/PatternView.Holo</item>
+ <!-- Or PatternView.Holo.Light, or your own style extending these two or not. -->
+ ```
