@@ -23,6 +23,7 @@
   <string name="pl_pattern_too_short">Connect at least %d dots, please redraw</string>
   <string name="pl_recording_pattern">Release finger when done</string>
  <string name="pl_old_pattern">Please draw old pattern</string>
+ <string name="pl_previous_pattern">Please draw old pattern to unlock</string>
   <string name="pl_redraw">Redraw</string>
   <string name="pl_wrong_pattern">Wrong pattern, please retry</string>
 

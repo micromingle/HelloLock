@@ -40,6 +40,10 @@ public class ManagerPatternActivity extends BasePatternActivity {
         if(type== PatternPreferencesActivity.CHANGE_PASSWORD) {
             messageText.setText(R.string.pl_old_pattern);
         }
+        if(type== PatternPreferencesActivity.DISABLE_PASSLOCK) {
+            messageText.setText(R.string.pl_previous_pattern);
+        }
+
     }
 
     @Override
