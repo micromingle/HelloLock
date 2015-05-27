@@ -26,7 +26,7 @@ an android library for you to lock your app
 
    within  application tag.
 
-   For the  HelloLockSample, I create my own application: BaseApplication ,then declare it as follows
+   As shown in  HelloLockSample, I create my own application :  BaseApplication ,then declare it as follows
 
 
   <application android:allowBackup="true" android:label="@string/app_name"
@@ -35,7 +35,7 @@ an android library for you to lock your app
 
 
 
-2  Open the file AndroidManifestt and declare the following activities:
+2  Open the file AndroidManifest and declare the following activities:
 
 
   <activity android:name="com.micromingle.hellolock.PatternPreferencesActivity"></activity>
