@@ -20,19 +20,20 @@ an android library for you to lock your app
 
    AppLockManager.getInstance().enableDefaultAppLockIfAvailable(this);
 
-   And in your AndroidManifest, replace the default application by claiming android:name="yourApplication"
+   And in your AndroidManifest, replace the default application with you custom Application
 
    within  application tag.
 
-   For the  HelloLockSample, I create my own application: BaseApplication ,then claim it as follows
+   For the  HelloLockSample, I create my own application: BaseApplication ,then declare it as follows
 
- ```xml
-    <application android:allowBackup="true" android:label="@string/app_name"
-           android:icon="@mipmap/ic_launcher" android:theme="@style/AppTheme.Light"
-           android:name=".BaseApplication">
-...
+```xml
+      <application android:allowBackup="true" android:label="@string/app_name"
+             android:icon="@mipmap/ic_launcher" android:theme="@style/AppTheme.Light"
+             android:name=".BaseApplication">
+ ...
 
-2  Open the file android.manifest and declare the following activities:
+
+2  Open the file AndroidManifestt and declare the following activities:
 
 ```xml
 <activity android:name="com.micromingle.hellolock.PatternPreferencesActivity"></activity>
@@ -50,7 +51,7 @@ an android library for you to lock your app
 <item name="patternViewStyle">@style/PatternView.Holo</item>
 ...
 
-4  call PatternPreferencesActivity to configure your pattern lock
+4  call PatternPreferencesActivity to configure your pattern lock.
 
  ```xml
  <item name="patternViewStyle">@style/PatternView.Holo</item>
