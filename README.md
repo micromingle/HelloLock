@@ -18,7 +18,10 @@ an android library for you to lock your app
 ## USAGE:
 
 ```xml
-1  Add the following line in onCreate of your App file :
+
+1  Add your module's dependency on hellolock library;
+
+2  Add the following line in onCreate of your App file :
 
    AppLockManager.getInstance().enableDefaultAppLockIfAvailable(this);
 
@@ -35,7 +38,7 @@ an android library for you to lock your app
 
 
 
-2  Open the file AndroidManifest and declare the following activities:
+3  Open the file AndroidManifest and declare the following activities:
 
 
   <activity android:name="com.micromingle.hellolock.PatternPreferencesActivity"></activity>
@@ -43,7 +46,7 @@ an android library for you to lock your app
   <activity android:name="com.micromingle.hellolock.ManagerPatternActivity"></activity>
 
 
-3  add the following items to you app theme:
+4  add the following items to you app theme:
 
 
   <item name="android:windowDisablePreview">true</item>
@@ -53,5 +56,5 @@ an android library for you to lock your app
   <item name="patternViewStyle">@style/PatternView.Holo</item>
 
 
-4  call PatternPreferencesActivity to configure your pattern lock.
+5  call PatternPreferencesActivity to configure your pattern lock.
 
