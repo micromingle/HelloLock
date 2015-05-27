@@ -2,7 +2,7 @@
 an android library for you to lock your app
 
 ## Thanks
- Thanks to those two libs
+ Thanks to these two libs
   * https://github.com/wordpress-mobile/PasscodeLock-Android
   * https://github.com/DreaminginCodeZH/PatternLock
 
