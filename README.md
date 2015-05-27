@@ -54,3 +54,27 @@ an android library for you to lock your app
 
 4  call PatternPreferencesActivity to configure your pattern lock.
 
+```xml
+<declare-styleable name="PatternView">
+    <!-- Defines the aspect to use when drawing PatternView. -->
+    <attr name="aspect">
+        <!-- Square; the default value. -->
+        <enum name="square" value="0" />
+        <enum name="lock_width" value="1" />
+        <enum name="lock_height" value="2" />
+    </attr>
+    <!-- Defines the regular pattern color. -->
+    <attr name="regularColor" format="color|reference" />
+    <!-- Defines the error color. -->
+    <attr name="errorColor" format="color|reference" />
+    <!-- Defines the success color. -->
+    <attr name="successColor" format="color|reference"/>
+    <!-- Defines the color to use when drawing PatternView paths. -->
+    <attr name="pathColor" format="color|reference" />
+    <attr name="dotDrawableDefault" format="reference" />
+    <attr name="dotDrawableTouched" format="reference" />
+    <attr name="circleDrawableDefault" format="reference" />
+    <attr name="circleDrawable" format="reference" />
+    <attr name="arrowUpDrawable" format="reference" />
+</declare-styleable>
+```
