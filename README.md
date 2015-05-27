@@ -17,6 +17,7 @@ an android library for you to lock your app
 
 ## USAGE:
 
+```xml
 1  Add the following line in onCreate of your App file :
 
    AppLockManager.getInstance().enableDefaultAppLockIfAvailable(this);
@@ -27,7 +28,7 @@ an android library for you to lock your app
 
    For the  HelloLockSample, I create my own application: BaseApplication ,then declare it as follows
 
- ```xml
+
   <application android:allowBackup="true" android:label="@string/app_name"
              android:icon="@mipmap/ic_launcher" android:theme="@style/AppTheme.Light"
              android:name=".BaseApplication">
@@ -40,7 +41,7 @@ an android library for you to lock your app
   <activity android:name="com.micromingle.hellolock.PatternPreferencesActivity"></activity>
   <activity android:name="com.micromingle.hellolock.PatternUnlockActivity"></activity>
   <activity android:name="com.micromingle.hellolock.ManagerPatternActivity"></activity>
-...
+
 
 3  add the following items to you app theme:
 
@@ -50,7 +51,7 @@ an android library for you to lock your app
    or
   <item name="android:windowDisablePreview">true</item>
   <item name="patternViewStyle">@style/PatternView.Holo</item>
-...
+
 
 4  call PatternPreferencesActivity to configure your pattern lock.
 
