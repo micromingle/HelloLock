@@ -37,10 +37,10 @@ public class PatternPreferencesActivity extends PreferenceActivity {
         turnPasscodeOnOff = findPreference("turn_passcode_on_off");
         changePasscode =  findPreference("change_passcode");
         
-        if ( AppLockManager.getInstance().getCurrentAppLock().isPasswordLocked() ) { 
-            turnPasscodeOnOff.setTitle(R.string.passcode_turn_off);
+        if (AppLockManager.getInstance().getCurrentAppLock().isPasswordLocked() ) {
+            turnPasscodeOnOff.setTitle(R.string.pattern_turn_off);
         } else {           
-            turnPasscodeOnOff.setTitle(R.string.passcode_turn_on);   
+            turnPasscodeOnOff.setTitle(R.string.pattern_turn_on);
             changePasscode.setEnabled(false);
         }
         
@@ -84,14 +84,14 @@ public class PatternPreferencesActivity extends PreferenceActivity {
         switch (requestCode) {
             case DISABLE_PASSLOCK:
                 if (resultCode == RESULT_OK) {
-                //    Toast.makeText(PatternPreferencesActivity.this, getString(R.string.passcode_set), Toast.LENGTH_SHORT).show();
+                //    Toast.makeText(PatternPreferencesActivity.this, getString(R.string.pattern_set), Toast.LENGTH_SHORT).show();
                     changePasscode.setEnabled(false);
                 }
                 break;
             case ENABLE_PASSLOCK:
             case CHANGE_PASSWORD:
                 if (resultCode == RESULT_OK) {
-                    Toast.makeText(PatternPreferencesActivity.this, getString(R.string.passcode_set), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PatternPreferencesActivity.this, getString(R.string.pattern_set), Toast.LENGTH_SHORT).show();
                     changePasscode.setEnabled(true);
                 } 
                 break;
@@ -103,10 +103,10 @@ public class PatternPreferencesActivity extends PreferenceActivity {
     
     private void updateUI() {
         if ( AppLockManager.getInstance().getCurrentAppLock().isPasswordLocked() ) { 
-            turnPasscodeOnOff.setTitle(R.string.passcode_turn_off);
+            turnPasscodeOnOff.setTitle(R.string.pattern_turn_off);
             changePasscode.setEnabled(true);
         } else {           
-            turnPasscodeOnOff.setTitle(R.string.passcode_turn_on);   
+            turnPasscodeOnOff.setTitle(R.string.pattern_turn_on);
             changePasscode.setEnabled(false);
         }
     }

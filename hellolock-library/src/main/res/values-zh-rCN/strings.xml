@@ -8,11 +8,11 @@
     <string name="passcode_enter_old_passcode">请输入密码</string>
     <string name="passcode_re_enter_passcode">请再次输入密码</string>
     <string name="passcode_change_passcode">修改锁屏密码</string>
-    <string name="passcode_set">设置成功</string>
-    <string name="passcode_wrong_passcode">密码错误, 请重试.</string>
+    <string name="pattern_set">设置成功</string>
+    <string name="pattern_wrong_passcode">图案错误, 请重试.</string>
     <string name="passcode_preference_title">Passcode lock</string>
-    <string name="passcode_turn_off">开启锁屏</string>
-    <string name="passcode_turn_on">关闭锁屏</string>
+    <string name="pattern_turn_off">关闭锁屏</string>
+    <string name="pattern_turn_on">开启锁屏</string>
     <string name="pl_cancel">取消</string>
     <string name="pl_confirm">确认</string>
     <string name="pl_confirm_pattern">再次绘制图案以确认</string>

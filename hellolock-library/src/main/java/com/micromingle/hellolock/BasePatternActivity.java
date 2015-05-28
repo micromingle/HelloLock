@@ -8,7 +8,6 @@ package com.micromingle.hellolock;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -89,7 +88,7 @@ public abstract class BasePatternActivity extends Activity implements LockPatter
     }
 
     protected void showPasswordError() {
-        Toast toast = Toast.makeText(BasePatternActivity.this, getString(R.string.passcode_wrong_passcode), Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(BasePatternActivity.this, getString(R.string.pattern_wrong_passcode), Toast.LENGTH_SHORT);
      //   toast.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL, 0, 30);
         toast.show();
     }

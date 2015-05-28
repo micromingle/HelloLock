@@ -4,7 +4,7 @@
 
     <Preference
         android:key="turn_passcode_on_off"
-        android:title="@string/passcode_turn_on"
+        android:title="@string/pattern_turn_on"
         android:persistent="false" />
 
     <Preference

@@ -58,3 +58,31 @@ an android library for you to lock your app
 
 5  call PatternPreferencesActivity to configure your pattern lock.
 
+
+6   you can also custom your path color and circle color in pl_base_pattern_activity.xml as follows
+
+    * Firstly   declare   xmlns:myview="http://schemas.android.com/apk/res-auto"  within root layout
+
+    as shown in pl_base_pattern_activity.xml:
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:myview="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="?android:attr/dividerHorizontal"
+        android:orientation="vertical"
+        android:id="@+id/AppUnlockLinearLayout1"
+        android:showDividers="middle">
+
+    * Secondly , define your custom color within com.micromingle.hellolock.LockPatternView as follows
+
+      <com.micromingle.hellolock.LockPatternView
+                android:id="@+id/pl_pattern"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                myview:aspect="lock_height"
+                myview:successColor="@android:color/holo_orange_light"
+                myview:regularColor="@android:color/holo_purple"
+                myview:errorColor="@android:color/holo_blue_dark"/>
+
