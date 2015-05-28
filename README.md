@@ -15,6 +15,11 @@ an android library for you to lock your app
 ![Sample](./ScreenShots/error.png)
 ![Sample](./ScreenShots/error2.png)
 
+## SAMPLE¡¡¡¡APPLICATION
+
+[Sample Application](./apk/HelloLockSample.apk)
+
+
 ## USAGE:
 
 ```xml
